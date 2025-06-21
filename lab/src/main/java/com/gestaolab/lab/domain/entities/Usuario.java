@@ -3,7 +3,7 @@ package com.gestaolab.lab.domain.entities;
 import java.io.Serializable;
 import java.time.LocalDateTime;
 
-import com.gestaolab.lab.domain.enums.Estado;
+import com.gestaolab.lab.domain.enums.EstadoCliente;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -30,7 +30,7 @@ public class Usuario implements Serializable {
     private String perfil;
 
     @Enumerated(EnumType.STRING)
-    private Estado estado;
+    private EstadoCliente estado;
 
     @Column(nullable = false)
     private int numCadastro;
@@ -42,7 +42,7 @@ public class Usuario implements Serializable {
     
     public Usuario() { }
 
-    public Usuario(Long usuario_id, String nome, String senha, String perfil, Estado estado, int numCadastro,
+    public Usuario(Long usuario_id, String nome, String senha, String perfil, EstadoCliente estado, int numCadastro,
             String email) {
         this.usuario_id = usuario_id;
         this.nome = nome;
